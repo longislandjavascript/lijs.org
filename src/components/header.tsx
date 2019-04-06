@@ -3,12 +3,12 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
-  margin: 1.45rem 0px;
+  margin: 1.45rem 11vw;
   text-align: center;
 `;
 
 const Title = styled.h1`
-  font-size: 10vw;
+  font-size: 8vw;
 `;
 
 const Header = ({ siteTitle }) => (

@@ -6,7 +6,6 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import Footer from "./Footer";
@@ -14,6 +13,7 @@ import Footer from "./Footer";
 const Main = styled.main`
   text-align: center;
   padding: 1vw;
+  padding-bottom: 150px;
 `;
 
 import Header from "./header";
@@ -41,9 +41,5 @@ const Layout = ({ children }) => (
     )}
   />
 );
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default Layout;

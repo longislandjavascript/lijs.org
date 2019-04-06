@@ -1,14 +1,14 @@
 import * as React from "react";
 import { Button } from "./common";
-import slackIcon from "../images/slack-icon.svg";
+import githubIcon from "../images/meetup-icon.svg";
 
-export interface SlackButtonProps {}
+export interface GithubButtonProps {}
 
-const GithubButton: React.FC<SlackButtonProps> = () => {
+const GithubButton: React.SFC<GithubButtonProps> = () => {
   return (
     <Button>
       <a
-        href="https://publicslack.com/slacks/https-lijs-group-slack-com/invites/new"
+        href="https://www.meetup.com/long-island-javascript-group/"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -19,13 +19,14 @@ const GithubButton: React.FC<SlackButtonProps> = () => {
             justifyContent: "center",
           }}
         >
-          <div>Join us on </div>
+          <div>Visit our</div>
 
           <img
-            src={slackIcon}
-            height="65px"
-            style={{ padding: "-50px", margin: "-80px 0px" }}
+            src={githubIcon}
+            height="25px"
+            style={{ margin: "-20px 10px" }}
           />
+          <div>Page</div>
         </div>
       </a>
     </Button>

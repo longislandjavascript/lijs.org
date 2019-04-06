@@ -6,3 +6,4 @@
 * Added button to open publicslack invite page and LIJS GitHub.
 * Added CHANGELOG and updated README.
 * Updated component structure and created placeholder landing page.
+* Added Meetup button and embedded Google Map.

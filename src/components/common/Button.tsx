@@ -9,6 +9,10 @@ const Button = styled.button`
   color: white;
   padding: 10px 10px;
   margin: 5px;
+  min-width: 250px;
+  :hover {
+    opacity: 0.9;
+  }
 `;
 
 export default Button;
