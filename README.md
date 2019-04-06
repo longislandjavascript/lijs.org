@@ -9,8 +9,6 @@ The official website for the Long Island JavaScript Meetup.
 
 It is deployed to the custom domain `lijs.org` via a Netlify continuous deployment GitHub integration.
 
-Netlify offers Lamda functions and forms, which could be fun :) 
-
 ## 🚀 Quick start
 
 1.  **Start developing.**
