@@ -3,23 +3,25 @@
 
 The official website for the Long Island JavaScript Meetup.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cdc3bef1-1a65-4072-95d8-cfe20e0befd0/deploy-status)](https://app.netlify.com/sites/heuristic-mirzakhani-1f32ba/deploys)
+
+`lijs.org` is built with Gatsby and TypeScript.
+
+It is deployed to the custom domain `lijs.org` via a Netlify continuous deployment GitHub integration.
+
+Netlify offers Lamda functions and forms, which could be fun :) 
+
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the default starter.
-
-    ```sh
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
-
 1.  **Start developing.**
+
+    `git clone git@github.com:lijs-meetup/lijs.org.git`
 
     Navigate into your new site’s directory and start it up.
 
     ```sh
-    cd my-default-starter/
+    cd lijs.org
+    npm install
     gatsby develop
     ```
 
