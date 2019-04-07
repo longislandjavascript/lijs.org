@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import SEO from "../components/Seo";
 import NextEvent from "../components/NextEvent";
 import About from "../components/About";

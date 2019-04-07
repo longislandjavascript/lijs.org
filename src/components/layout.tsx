@@ -16,7 +16,7 @@ const Main = styled.main`
 `;
 
 import Header from "./Header";
-import "./Layout.css";
+import "./layout.css";
 
 const Layout = ({ children }) => (
   <StaticQuery
