@@ -1,9 +1,7 @@
 import * as React from "react";
-import Map from "./Map";
+import Map from "./map";
 
-export interface AboutProps {}
-
-const About: React.SFC<AboutProps> = () => {
+const About = () => {
   return (
     <div style={{ textAlign: "center", marginTop: "30px", padding: "30px" }}>
       <h2>About Our Group</h2>
