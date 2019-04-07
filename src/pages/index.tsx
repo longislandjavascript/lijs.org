@@ -21,7 +21,7 @@ const IndexPage = () => (
 
     <div style={{ textAlign: "center", marginTop: "20px" }}>
       <div>
-        We meet the last wednesday of every month at Launchpad Huntington.
+        We meet the last wednesday of every month at LaunchPad Huntington.
       </div>
       <div>
         <iframe
@@ -30,7 +30,7 @@ const IndexPage = () => (
           height="450"
           // frameborder="0"
           // allowfullscreen
-          style={{ border: 0, maxWidth: "100vw" }}
+          style={{ border: 0, maxWidth: "90vw" }}
         />
       </div>
     </div>

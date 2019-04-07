@@ -9,6 +9,9 @@ const StyledHeader = styled.header`
 
 const Title = styled.h1`
   font-size: 8vw;
+  @media (max-width: 768px) {
+    font-size: 9vw;
+  }
 `;
 
 const Header = ({ siteTitle }) => (
