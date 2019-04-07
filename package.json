@@ -51,7 +51,7 @@
     "lambda:serve": "netlify-lambda serve ./src/lambda",
     "lambda:build": "netlify-lambda build ./src/lambda",
     "fix": "tslint --fix -c ./tslint.json 'src/**/*{.ts,.tsx}'",
-    "prod": "npm run build; npm run lambda:serve"
+    "prod": "npm run build; npm run lambda:build"
   },
   "repository": {
     "type": "git",
