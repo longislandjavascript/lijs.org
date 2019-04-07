@@ -1,4 +1,5 @@
 [build]
   publish = "public/"
-  command = "gatsby build"
+  command = "npm run build"
   functions = "lambda"
+  command = "npm run lambda-build"
