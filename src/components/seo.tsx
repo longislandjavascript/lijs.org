@@ -13,7 +13,7 @@ interface SEOProps {
   description?: string;
   lang?: string;
   meta?: any[];
-  keywords: string[];
+  keywords?: string[];
   title: string;
 }
 
