@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "./common/button";
+import Button from "./button";
 
 const Wrapper = styled.div`
   width: 100vw;
