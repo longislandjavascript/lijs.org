@@ -8,14 +8,14 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
-import Footer from "./Footer";
+import Footer from "./footer";
 
 const Main = styled.main`
   text-align: center;
   padding-bottom: 150px;
 `;
 
-import Header from "./Header";
+import Header from "./header";
 import "./layout.css";
 
 const Layout = ({ children }) => (

@@ -1,5 +1,5 @@
 import * as React from "react";
-import Map from "../components/Map";
+import Map from "./Map";
 
 export interface AboutProps {}
 

@@ -3,8 +3,8 @@ import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import NextEvent from "../components/NextEvent";
-import About from "../components/About";
+import NextEvent from "../components/next-event";
+import About from "../components/about";
 
 const IndexPage = () => (
   <Layout>
