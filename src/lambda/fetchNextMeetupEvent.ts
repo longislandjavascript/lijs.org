@@ -42,7 +42,7 @@ exports.handler = async (event, context, callback) => {
       };
       send(finalResult);
     } catch (error) {
-      send(error.message);
+      callback(error);
     }
   };
 
