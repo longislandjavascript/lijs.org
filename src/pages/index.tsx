@@ -10,14 +10,14 @@ import AboutSite from "../components/sections/about-site";
 
 const IndexPage = () => {
   const [nextEvent, setNextEvent] = useState([]);
-  const IS_DEV = false;
-  const API_ENDPOINT = IS_DEV ? "http://localhost:9000/" : "/.netlify/lambda/";
+
+  // * Proxy
+  const API_ENDPOINT = "/.netlify/functions/";
 
   useEffect(() => {
     const fetchMeetupEvents = async () => {
       try {
         const results = await axios.get(`${API_ENDPOINT}fetchNextMeetupEvent`);
-        console.log(results.data);
         setNextEvent(results.data);
       } catch (error) {
         console.error(error);

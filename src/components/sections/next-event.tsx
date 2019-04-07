@@ -26,40 +26,41 @@ const NextEvent: React.FC<NextEventProps> = ({ event }) => {
   return (
     <Section bg="#333" color="lightgray">
       <h2>Next Event</h2>
+      {event.name && (
+        <div>
+          <EventName>{event.name}</EventName>
+          <div>{event.rsvps} are going.</div>
+          <a href={event.link} target="_blank" rel="noopener noreferrer">
+            <Button>RSVP Now!</Button>
+          </a>
+          <Container>
+            <WhenWhereWrapper>
+              <WhenWhere>When</WhenWhere>
+              <div>
+                <div>{event.date}</div>
+                <div>{event.time}</div>
+              </div>
+            </WhenWhereWrapper>
+            <WhenWhereWrapper>
+              <WhenWhere>Where</WhenWhere>
+              <div>
+                <div>
+                  <b>{event.venue}</b>
+                </div>
+                <div>{event.address_street}</div>
+                <div>{event.address_city_state}</div>
+              </div>
+            </WhenWhereWrapper>
+          </Container>
 
-      <EventName>{event.name}</EventName>
-
-      <div>{event.rsvps} are going.</div>
-
-      <a href={event.link} target="_blank" rel="noopener noreferrer">
-        <Button>RSVP Now!</Button>
-      </a>
-      <Container>
-        <WhenWhereWrapper>
-          <WhenWhere>When</WhenWhere>
+          <br />
           <div>
-            <div>{event.date}</div>
-            <div>{event.time}</div>
+            We meet on the last Wednesday of every month at LaunchPad in
+            Huntington, NY.
           </div>
-        </WhenWhereWrapper>
-        <WhenWhereWrapper>
-          <WhenWhere>Where</WhenWhere>
-          <div>
-            <div>
-              <b>{event.venue}</b>
-            </div>
-            <div>{event.address_street}</div>
-            <div>{event.address_city_state}</div>
-          </div>
-        </WhenWhereWrapper>
-      </Container>
-
-      <br />
-      <div>
-        We meet on the last Wednesday of every month at LaunchPad in Huntington,
-        NY.
-      </div>
-      <EventMap />
+          <EventMap />
+        </div>
+      )}
     </Section>
   );
 };
