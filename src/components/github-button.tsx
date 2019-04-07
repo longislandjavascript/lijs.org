@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { Button } from "./common";
 import githubIcon from "../images/github-icon.svg";
 
