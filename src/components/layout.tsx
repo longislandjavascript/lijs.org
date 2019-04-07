@@ -5,17 +5,17 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react";
-import { StaticQuery, graphql } from "gatsby";
-import styled from "styled-components";
+import { graphql, StaticQuery } from 'gatsby';
+import React from 'react';
+import styled from 'styled-components';
 
 const Main = styled.main`
   text-align: center;
   padding-bottom: 150px;
 `;
 
-import Header from "./header";
-import "./layout.css";
+import Header from './header';
+import './layout.css';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -28,13 +28,10 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div>
-          <Main>{children}</Main>
-          {/* <Footer /> */}
-        </div>
+        <Main>{children}</Main>
       </>
     )}
   />

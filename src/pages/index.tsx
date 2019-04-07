@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 // * Sections
-import NextEvent from "../components/sections/next-event";
-import AboutGroup from "../components/sections/about-group";
-import AboutSite from "../components/sections/about-site";
+import AboutGroup from '../components/sections/about-group';
+import AboutSite from '../components/sections/about-site';
+import NextEvent from '../components/sections/next-event';
 
 const IndexPage = () => {
   const [nextEvent, setNextEvent] = useState([]);
+  const [error, setError] = useState({ message: '' });
 
   // * Proxy
-  const API_ENDPOINT = "/.netlify/functions/";
+  const API_ENDPOINT = '/.netlify/functions/';
 
   useEffect(() => {
     const fetchMeetupEvents = async () => {
@@ -20,7 +21,7 @@ const IndexPage = () => {
         const results = await axios.get(`${API_ENDPOINT}fetchNextMeetupEvent`);
         setNextEvent(results.data);
       } catch (error) {
-        console.error(error);
+        setError(error);
       }
     };
     fetchMeetupEvents();
@@ -31,6 +32,7 @@ const IndexPage = () => {
       <NextEvent event={nextEvent} />
       <AboutGroup />
       <AboutSite />
+      {error.message}
     </Layout>
   );
 };

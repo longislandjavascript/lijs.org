@@ -14,3 +14,4 @@
 * Wired up Meetup API via Netlify lambda to fetch and display next event details.
 * Refactored directory structure.
 * Partially implemented environment variables.
+* Setup TSLint.

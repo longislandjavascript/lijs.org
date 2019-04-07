@@ -1,9 +1,9 @@
-import { Link } from "gatsby";
-import React from "react";
-import styled from "styled-components";
-import SlackButton from "./buttons/slack-button";
-import GithubButton from "./buttons/github-button";
-import MeetupButton from "./buttons/meetup-button";
+import { Link } from 'gatsby';
+import React from 'react';
+import styled from 'styled-components';
+import GithubButton from './buttons/github-button';
+import MeetupButton from './buttons/meetup-button';
+import SlackButton from './buttons/slack-button';
 
 const StyledHeader = styled.header`
   padding: 3rem 11vw;

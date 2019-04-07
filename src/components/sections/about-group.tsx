@@ -1,13 +1,13 @@
-import React from "react";
-import Map from "../event-map";
-import { Section } from "../common";
+import React from 'react';
+import { Section } from '../common';
+import Map from '../event-map';
 
 const About = () => {
   return (
     <Section bg="gold">
       <h2>About Our Group</h2>
       <p>
-        <span style={{ fontWeight: "bold" }}>Long Island JavaScript Group</span>{" "}
+        <span style={{ fontWeight: 'bold' }}>Long Island JavaScript Group</span>{' '}
         is a space for JavaScript enthusiasts or newcomers interested in
         learning the language.
       </p>

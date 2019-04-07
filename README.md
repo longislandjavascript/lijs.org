@@ -1,10 +1,14 @@
-# lijs.org [![Netlify Status](https://api.netlify.com/api/v1/badges/cdc3bef1-1a65-4072-95d8-cfe20e0befd0/deploy-status)](https://app.netlify.com/sites/heuristic-mirzakhani-1f32ba/deploys)
+# [lijs.org](https://www.lijs.org)
 
-The official website for the Long Island JavaScript Meetup.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cdc3bef1-1a65-4072-95d8-cfe20e0befd0/deploy-status)](https://app.netlify.com/sites/heuristic-mirzakhani-1f32ba/deploys)
+
+The official website of the Long Island JavaScript Group.
 
 This site is built with Gatsby and TypeScript.
 
 It is deployed to the custom domain `lijs.org` via a Netlify continuous deployment GitHub integration.
+
+Any pushes to the `master` branch automatically run new builds and triggers a new deployment.
 
 ## 🚀 Quick start
 
@@ -17,16 +21,18 @@ It is deployed to the custom domain `lijs.org` via a Netlify continuous deployme
     ```sh
     cd lijs.org
     npm install
-    gatsby develop
+    npm run start
     ```
 
 1.  **Open the source code and start editing!**
 
+  `npm run start` fires up two dev servers. One for serving the client code and one for executing Netlify lambda functions.
+
     Your site is now running at `http://localhost:8000`!
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+    A dev server for calling Netlify functions is also running at `http://localhost:9000`. You can use the `/.netlify/functions/{nameOfFunction}` syntax as a proxy is in place in the `gatsby.config.ts` file.
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
 ## 🧐 What's inside?
 
@@ -45,6 +51,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── package-lock.json
     ├── package.json
     └── README.md
+    └── CHANGELOG.md
 
 1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
@@ -69,4 +76,6 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
 12. **`README.md`**: A text file containing useful reference information about your project.
+
+13. **`CHANGELOG.md`**: A text file containing changes made to the project.
 

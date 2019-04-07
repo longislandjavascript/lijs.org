@@ -1,10 +1,8 @@
-import React from "react";
-import { Button } from "../common";
-import meetupIcon from "../../images/meetup-icon.svg";
+import React from 'react';
+import { Button } from '../common';
+const meetupIcon = require('../../images/meetup-icon.svg');
 
-export interface GithubButtonProps {}
-
-const GithubButton: React.SFC<GithubButtonProps> = () => {
+const GithubButton = () => {
   return (
     <Button>
       <a
@@ -14,9 +12,9 @@ const GithubButton: React.SFC<GithubButtonProps> = () => {
       >
         <div
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
           <div>Visit us on</div>
@@ -24,7 +22,7 @@ const GithubButton: React.SFC<GithubButtonProps> = () => {
           <img
             src={meetupIcon}
             height="28px"
-            style={{ margin: "-20px 10px" }}
+            style={{ margin: '-20px 10px' }}
           />
         </div>
       </a>

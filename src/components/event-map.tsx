@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const MapWrapper = styled.div`
   width: 60%;
@@ -14,7 +14,7 @@ interface EventMapProps {
   src?: string;
 }
 const Map: React.FC<EventMapProps> = ({
-  src = "https://snazzymaps.com/embed/146447",
+  src = 'https://snazzymaps.com/embed/146447',
 }) => {
   return (
     <MapWrapper>
@@ -22,7 +22,7 @@ const Map: React.FC<EventMapProps> = ({
         src={src}
         width="100%"
         height="500px"
-        style={{ border: "none" }}
+        style={{ border: 'none' }}
       />
     </MapWrapper>
   );

@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import EventMap from "../event-map";
-import { Button, Section } from "../common";
+import React from 'react';
+import styled from 'styled-components';
+import { Button, Section } from '../common';
+import EventMap from '../event-map';
 
 const EventName = styled.h1`
   color: gold;
