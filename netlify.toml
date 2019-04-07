@@ -1,4 +1,4 @@
 [build]
-  publish = "./public"
+  publish = "public"
   command = "build"
   functions = "lambda"
