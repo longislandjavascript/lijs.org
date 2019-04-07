@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Gatsby from "./GatsbyIcon";
-import TypeScript from "../components/typescript";
 
 const StyledFooter = styled.footer`
   background: #333;
