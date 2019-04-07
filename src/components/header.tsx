@@ -1,9 +1,12 @@
 import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
+import SlackButton from "./SlackButton";
+import GithubButton from "./GithubButton";
+import MeetupButton from "./MeetupButton";
 
 const StyledHeader = styled.header`
-  margin: 1.45rem 11vw;
+  padding: 3rem 11vw;
   text-align: center;
 `;
 
@@ -21,6 +24,10 @@ const Header = ({ siteTitle }) => (
         <Link to="/">{siteTitle}</Link>
       </Title>
     </div>
+    <br />
+    <MeetupButton />
+    <SlackButton />
+    <GithubButton />
   </StyledHeader>
 );
 

@@ -12,11 +12,10 @@ import Footer from "./Footer";
 
 const Main = styled.main`
   text-align: center;
-  padding: 1vw;
   padding-bottom: 150px;
 `;
 
-import Header from "./header";
+import Header from "./Header";
 import "./layout.css";
 
 const Layout = ({ children }) => (
