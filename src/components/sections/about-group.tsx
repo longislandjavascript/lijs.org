@@ -1,23 +1,21 @@
 import React from "react";
-import Map from "./map";
+import Map from "../event-map";
+import { Section } from "../common";
 
 const About = () => {
   return (
-    <div style={{ textAlign: "center", marginTop: "30px", padding: "30px" }}>
+    <Section bg="gold">
       <h2>About Our Group</h2>
       <p>
-        <span style={{ color: "steelblue", fontWeight: "bold" }}>
-          Long Island JavaScript Group
-        </span>{" "}
+        <span style={{ fontWeight: "bold" }}>Long Island JavaScript Group</span>{" "}
         is a space for JavaScript enthusiasts or newcomers interested in
         learning the language.
       </p>
-      <b>
+      <p>
         We meet on the last Wednesday of the month at LaunchPad in Huntington,
         NY.
-      </b>
-      <Map />
-    </div>
+      </p>
+    </Section>
   );
 };
 

@@ -9,3 +9,8 @@
 * Added Meetup button and embedded Google Map.
 * Wired up lambda directory and scripts.
 * Stubbed Next Event section pending Meetup API implementation.
+
+## 2019-04-07
+* Wired up Meetup API via Netlify lambda to fetch and display next event details.
+* Refactored directory structure.
+* Partially implemented environment variables.

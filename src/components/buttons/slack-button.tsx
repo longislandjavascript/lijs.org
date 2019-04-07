@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "./button";
-import slackIcon from "../images/slack-icon.svg";
+import { Button } from "../common";
+import slackIcon from "../../images/slack-icon.svg";
 
 export interface SlackButtonProps {}
 

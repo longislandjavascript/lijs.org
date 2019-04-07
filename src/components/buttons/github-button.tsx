@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "./button";
-import githubIcon from "../images/meetup-icon.svg";
+import { Button } from "../common";
+import githubIcon from "../../images/github-icon.svg";
 
 export interface GithubButtonProps {}
 
@@ -8,7 +8,7 @@ const GithubButton: React.SFC<GithubButtonProps> = () => {
   return (
     <Button>
       <a
-        href="https://www.meetup.com/long-island-javascript-group/"
+        href="https://github.com/lijs-meetup"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -19,14 +19,13 @@ const GithubButton: React.SFC<GithubButtonProps> = () => {
             justifyContent: "center",
           }}
         >
-          <div>Visit our</div>
+          <div>Visit the LIJS GitHub </div>
 
           <img
             src={githubIcon}
             height="25px"
             style={{ margin: "-20px 10px" }}
           />
-          <div>Page</div>
         </div>
       </a>
     </Button>
