@@ -19,11 +19,11 @@ const GithubButton: React.SFC<GithubButtonProps> = () => {
             justifyContent: "center",
           }}
         >
-          <div>Visit the LIJS GitHub </div>
+          <div>Visit us on </div>
 
           <img
             src={githubIcon}
-            height="25px"
+            height="18px"
             style={{ margin: "-20px 10px" }}
           />
         </div>

@@ -27,8 +27,8 @@ const Header = ({ siteTitle }) => (
     <br />
 
     <MeetupButton />
-    <SlackButton />
     <GithubButton />
+    <SlackButton />
   </StyledHeader>
 );
 
