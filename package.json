@@ -21,6 +21,7 @@
     "gatsby-transformer-sharp": "^2.1.17",
     "netlify-lambda": "^1.4.3",
     "react": "^16.8.6",
+    "react-animations": "^1.0.0",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "styled-components": "^4.2.0"
@@ -45,7 +46,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm-run-all --parallel develop lambda:serve",
+    "start": "npm-run-all --parallel lambda:serve develop",
     "serve": "gatsby serve",
     "test": "jest",
     "lambda:serve": "netlify-lambda serve ./src/lambda",

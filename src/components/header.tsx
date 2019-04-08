@@ -1,13 +1,17 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import styled from 'styled-components';
+import { zoomIn } from 'react-animations';
+import styled, { keyframes } from 'styled-components';
 import GithubButton from './buttons/github-button';
 import MeetupButton from './buttons/meetup-button';
 import SlackButton from './buttons/slack-button';
 
+const zoomInAnimation = keyframes`${zoomIn}`;
+
 const StyledHeader = styled.header`
   padding: 3rem 11vw;
   text-align: center;
+  animation: 1s ${zoomInAnimation};
 `;
 
 const Title = styled.h1`

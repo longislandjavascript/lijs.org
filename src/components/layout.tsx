@@ -11,7 +11,6 @@ import styled from 'styled-components';
 
 const Main = styled.main`
   text-align: center;
-  padding-bottom: 150px;
 `;
 
 import Header from './header';

@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import FadeIn from '../animations/fade-in';
 import { Button, Section } from '../common';
 import EventMap from '../event-map';
 
@@ -24,10 +25,10 @@ interface NextEventProps {
 
 const NextEvent: React.FC<NextEventProps> = ({ event }) => {
   return (
-    <Section bg="#333" color="lightgray">
+    <Section bg="#333" color="lightgray" style={{ minHeight: '300px' }}>
       <h2>Next Event</h2>
       {event.name && (
-        <div>
+        <FadeIn block={true}>
           <EventName>{event.name}</EventName>
           <div>{event.rsvps} are going.</div>
           <a href={event.link} target="_blank" rel="noopener noreferrer">
@@ -59,7 +60,7 @@ const NextEvent: React.FC<NextEventProps> = ({ event }) => {
             Huntington, NY.
           </div>
           <EventMap />
-        </div>
+        </FadeIn>
       )}
     </Section>
   );

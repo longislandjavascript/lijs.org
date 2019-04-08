@@ -15,3 +15,5 @@
 * Refactored directory structure.
 * Partially implemented environment variables.
 * Setup TSLint.
+* Added lamdba functions to fetch Meetup members and member count.
+* Created components to display member info.
