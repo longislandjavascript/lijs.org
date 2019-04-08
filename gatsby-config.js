@@ -47,11 +47,11 @@ module.exports = {
   ],
   developMiddleware: app => {
     app.use(
-      "/.netlify/functions/",
+      "/.netlify",
       proxy({
         target: "http://localhost:9000",
         pathRewrite: {
-          "/.netlify/functions/": "",
+          "/.netlify/functions": "",
         },
       })
     );
