@@ -7,17 +7,22 @@ const Wrapper = styled.div`
   margin: 0 auto;
 `;
 const Q = styled.h3`
-  color: steelblue;
+  color: gold;
 `;
 
 const A = styled.h5`
-  color: #333;
+  color: lightgray;
 `;
 
 const faqs = [
   {
     q: 'Does it cost to attend an LIJS Meetup?',
     a: 'Nope. All of our events are completely free to attend.',
+  },
+  {
+    q: 'Do I need to know JavaScript?',
+    a:
+      'Not necessarily. We strive to make our events as beginner-friendly as possible, although this can be challenging depending on the subject matter.',
   },
   {
     q: 'When do you meet?',
@@ -29,10 +34,11 @@ const faqs = [
     a:
       'Absolutley! While we do prefer that you RSVP, this is not a requirement.',
   },
+
   {
     q: "I'm interested in presenting at an LIJS event. How do I do this?",
     a:
-      'Great! Just get in contact with any of the organizers and we would love to discuss it further.',
+      'Just get in contact with any of the organizers and we would love to discuss it further.',
   },
   {
     q: 'Do I need to bring a computer?',
@@ -53,17 +59,18 @@ const faqs = [
 const FAQList = faqs.map(faq => {
   return (
     <div key={faq.q}>
-      <Q>{faq.q}</Q>
+      <Q>{faq.q.toUpperCase()}</Q>
       <A>{faq.a}</A>
+      <hr style={{ borderTop: '1px dashed steelblue' }} />
     </div>
   );
 });
 
 const FAQ = () => {
   return (
-    <Section>
+    <Section bg="black" color="white">
       <Wrapper>
-        <h1>FAQ</h1>
+        <h1 style={{ background: 'steelblue', padding: '5px' }}>FAQ</h1>
         {FAQList}
       </Wrapper>
     </Section>

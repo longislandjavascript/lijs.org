@@ -1,8 +1,7 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import React, { Fragment } from 'react';
-import styled, { keyframes } from 'styled-components';
-import FadeIn from '../animations/fade-in';
+import React from 'react';
+import styled from 'styled-components';
 import { Section } from '../common';
+import MembersList from '../members-list';
 
 const Avatar = styled.img`
   border-radius: 50%;
@@ -26,17 +25,6 @@ interface AboutProps {
   memberCount: string;
 }
 const About: React.FC<AboutProps> = ({ memberCount }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      allMeetupMember {
-        nodes {
-          photo {
-            thumb_link
-          }
-        }
-      }
-    }
-  `);
   return (
     <Section bg="black" color="white">
       <h2>About Our Group</h2>
@@ -55,17 +43,7 @@ const About: React.FC<AboutProps> = ({ memberCount }) => {
       <div style={{ margin: '10px' }}>
         <MemberCount>{memberCount} and counting!</MemberCount>
       </div>
-      {data.allMeetupMember.nodes.map((member, i) => {
-        if (member.photo && member.photo.thumb_link) {
-          return (
-            <Fragment key={member.photo.thumb_link}>
-              <FadeIn>
-                <Avatar height="30" width="30" src={member.photo.thumb_link} />
-              </FadeIn>
-            </Fragment>
-          );
-        }
-      })}
+      <MembersList />
     </Section>
   );
 };

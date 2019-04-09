@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import GlobalStyles from '../styles/globalStyles';
 
 // * Sections
 import AboutGroup from '../components/sections/about-group';
@@ -13,14 +14,17 @@ const IndexPage = ({ data }) => {
   const memberCount = `${data.meetupGroup.members} ${data.meetupGroup.who}`;
 
   return (
-    <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <NextEvent event={data.meetupGroup.next_event} />
-      <AboutGroup memberCount={memberCount} />
-      <FAQ />
-      <AboutSite />
-      <h2 style={{ paddingTop: '100px' }}>The End</h2>
-    </Layout>
+    <>
+      <GlobalStyles />
+      <Layout>
+        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <NextEvent event={data.meetupGroup.next_event} />
+        <AboutGroup memberCount={memberCount} />
+        <FAQ />
+        <AboutSite />
+        <h2 style={{ paddingTop: '100px' }}>The End</h2>
+      </Layout>
+    </>
   );
 };
 

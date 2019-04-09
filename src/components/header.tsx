@@ -12,9 +12,10 @@ const StyledHeader = styled.header`
 `;
 
 const Title = styled.h1`
-  font-size: 8vw;
+  font-size: 9vw;
+  /* font-family: Adam-Warren; */
   @media (max-width: 768px) {
-    font-size: 9vw;
+    font-size: 10vw;
   }
 `;
 

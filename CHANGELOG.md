@@ -22,3 +22,5 @@
 * Removed Lambda functions for querying Meetup API data in favor of Gatsby custom source-plugins.
 * Small refactors.
 * Added FAQ section.
+* Added global styles via styled-components.
+* Added more FAQs.
