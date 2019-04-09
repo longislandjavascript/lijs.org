@@ -50,7 +50,7 @@ const faqs = [
 
 const FAQList = faqs.map(faq => {
   return (
-    <div>
+    <div key={faq.q}>
       <Q>{faq.q}</Q>
       <A>{faq.a}</A>
     </div>
