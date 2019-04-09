@@ -21,3 +21,4 @@
 ## 2019-04-08
 * Removed Lambda functions for querying Meetup API data in favor of Gatsby custom source-plugins.
 * Small refactors.
+* Added FAQ section.

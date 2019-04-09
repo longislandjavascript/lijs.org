@@ -6,6 +6,7 @@ import SEO from '../components/seo';
 // * Sections
 import AboutGroup from '../components/sections/about-group';
 import AboutSite from '../components/sections/about-site';
+import FAQ from '../components/sections/faq';
 import NextEvent from '../components/sections/next-event';
 
 const IndexPage = ({ data }) => {
@@ -16,6 +17,7 @@ const IndexPage = ({ data }) => {
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <NextEvent event={data.meetupGroup.next_event} />
       <AboutGroup memberCount={memberCount} />
+      <FAQ />
       <AboutSite />
       <h2 style={{ paddingTop: '100px' }}>The End</h2>
     </Layout>

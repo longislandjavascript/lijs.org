@@ -1,4 +1,4 @@
-var proxy = require("http-proxy-middleware");
+var proxy = require('http-proxy-middleware');
 
 module.exports = {
   siteMetadata: {
@@ -23,7 +23,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: /assets/,
@@ -46,15 +46,16 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-  developMiddleware: app => {
-    app.use(
-      "/.netlify",
-      proxy({
-        target: "http://localhost:9000",
-        pathRewrite: {
-          "/.netlify/functions": "",
-        },
-      })
-    );
-  },
+  // This option is used when using Netlify lambda functions, which proxies the url target on development mode.
+  // developMiddleware: app => {
+  //   app.use(
+  //     "/.netlify",
+  //     proxy({
+  //       target: "http://localhost:9000",
+  //       pathRewrite: {
+  //         "/.netlify/functions": "",
+  //       },
+  //     })
+  //   );
+  // },
 };

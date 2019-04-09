@@ -25,6 +25,7 @@
     "react-animations": "^1.0.0",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
+    "react-photo-gallery": "^6.3.2",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
