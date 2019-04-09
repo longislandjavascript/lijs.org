@@ -10,7 +10,9 @@ const Q = styled.h3`
   color: steelblue;
 `;
 
-const A = styled.h5``;
+const A = styled.h5`
+  color: #333;
+`;
 
 const faqs = [
   {
