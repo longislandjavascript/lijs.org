@@ -2,6 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../common';
 
+const Title = styled.h1`
+  background: gold;
+  color: #333;
+  padding: 5px;
+`;
 const Wrapper = styled.div`
   max-width: 900px;
   margin: 0 auto;
@@ -32,7 +37,7 @@ const faqs = [
   {
     q: 'Can I show up if I did not RSVP?',
     a:
-      'Absolutley! While we do prefer that you RSVP, this is not a requirement.',
+      'Absolutely! While we do prefer that you RSVP, this is not a requirement.',
   },
 
   {
@@ -48,7 +53,7 @@ const faqs = [
   {
     q: 'Can my company sponsor your group?',
     a:
-      'Absolutely! We do not charge for events, so sponsorships help to cover some of our operating costs and provide food, beverages, and giveaways to our group.',
+      'Absolutely! We do not charge for events, so sponsorships help to cover some of our operating costs and to provide food, beverages, and giveaways to our group.',
   },
   {
     q: 'Are your events streamed or posted online?',
@@ -70,7 +75,7 @@ const FAQ = () => {
   return (
     <Section bg="black" color="white">
       <Wrapper>
-        <h1 style={{ background: 'steelblue', padding: '5px' }}>FAQ</h1>
+        <Title>FAQ</Title>
         {FAQList}
       </Wrapper>
     </Section>

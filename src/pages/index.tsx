@@ -3,6 +3,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import GlobalStyles from '../styles/globalStyles';
+import { Section } from '../components/common';
 
 // * Sections
 import AboutGroup from '../components/sections/about-group';
@@ -22,7 +23,10 @@ const IndexPage = ({ data }) => {
         <AboutGroup memberCount={memberCount} />
         <FAQ />
         <AboutSite />
-        <h2 style={{ paddingTop: '100px' }}>The End</h2>
+        <Section style={{ paddingTop: '100px' }}>
+          <h3>Thanks for checking out our site!</h3>
+          <h2>-The End-</h2>
+        </Section>
       </Layout>
     </>
   );

@@ -6,7 +6,6 @@ import EventMap from '../event-map';
 
 const EventName = styled.h1`
   color: gold;
-  border: 0.5px solid lightgray;
   max-width: 800px;
   margin: 10px auto;
   padding: 10px;

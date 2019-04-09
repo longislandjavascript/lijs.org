@@ -3,6 +3,11 @@ import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import FadeIn from './animations/fade-in';
 
+const Wrapper = styled.div`
+  max-width: 900px;
+  margin: 0 auto;
+`;
+
 const Avatar = styled.img`
   border-radius: 50%;
   margin: 3px;
@@ -34,7 +39,7 @@ const MembersList = () => {
     }
   `);
   return (
-    <>
+    <Wrapper>
       {data.allMeetupMember.nodes.map((member, i) => {
         if (member.photo && member.photo.thumb_link) {
           return (
@@ -46,7 +51,7 @@ const MembersList = () => {
           );
         }
       })}
-    </>
+    </Wrapper>
   );
 };
 

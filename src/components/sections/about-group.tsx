@@ -8,11 +8,13 @@ const Avatar = styled.img`
   margin: 3px;
 `;
 
-const MemberCount = styled.span`
+const MemberCount = styled.div`
   background: steelblue;
   color: white;
   padding: 3px 10px;
   border-radius: 15px;
+  max-width: 500px;
+  margin: 0 auto;
 `;
 
 interface Member {
