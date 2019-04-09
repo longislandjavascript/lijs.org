@@ -46,7 +46,7 @@ const NextEvent: React.FC<NextEventProps> = ({ event }) => {
               <WhenWhere>Where</WhenWhere>
               <div>
                 <div>
-                  <b>{event.venue}</b>
+                  <b>LaunchPad Huntington</b>
                 </div>
                 <div>{event.address_street}</div>
                 <div>{event.address_city_state}</div>
@@ -55,10 +55,7 @@ const NextEvent: React.FC<NextEventProps> = ({ event }) => {
           </Container>
 
           <br />
-          <div>
-            We meet on the last Wednesday of every month at LaunchPad in
-            Huntington, NY.
-          </div>
+
           <EventMap />
         </FadeIn>
       )}

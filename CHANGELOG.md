@@ -17,3 +17,7 @@
 * Setup TSLint.
 * Added lamdba functions to fetch Meetup members and member count.
 * Created components to display member info.
+
+## 2019-04-08
+* Removed Lambda functions for querying Meetup API data in favor of Gatsby custom source-plugins.
+* Small refactors.

@@ -1,7 +1,8 @@
-import React, { Fragment } from 'react';
-import styled, { keyframes } from 'styled-components';
-import FadeIn from '../animations/fade-in';
-import { Section } from '../common';
+import { graphql, useStaticQuery } from "gatsby";
+import React, { Fragment } from "react";
+import styled, { keyframes } from "styled-components";
+import FadeIn from "../animations/fade-in";
+import { Section } from "../common";
 
 const Avatar = styled.img`
   border-radius: 50%;
@@ -16,22 +17,34 @@ const MemberCount = styled.span`
 `;
 
 interface Member {
-  thumbnail?: string;
+  photo: {
+    thumb_link: string;
+  };
 }
 
 interface AboutProps {
   memberCount: string;
-  members: Member[];
 }
-const About: React.FC<AboutProps> = ({ memberCount, members }) => {
+const About: React.FC<AboutProps> = ({ memberCount }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMeetupMember {
+        nodes {
+          photo {
+            thumb_link
+          }
+        }
+      }
+    }
+  `);
   return (
     <Section bg="black" color="white">
       <h2>About Our Group</h2>
 
       <p>
-        <span style={{ fontWeight: 'bold', color: 'gold' }}>
+        <span style={{ fontWeight: "bold", color: "gold" }}>
           Long Island JavaScript Group
-        </span>{' '}
+        </span>{" "}
         is a space for JavaScript enthusiasts or newcomers interested in
         learning the language.
       </p>
@@ -39,18 +52,20 @@ const About: React.FC<AboutProps> = ({ memberCount, members }) => {
         We meet on the last Wednesday of the month at LaunchPad in Huntington,
         NY.
       </p>
-      <div style={{ margin: '10px' }}>
+      <div style={{ margin: "10px" }}>
         <MemberCount>{memberCount} and counting!</MemberCount>
       </div>
-      {members.map((member, i) => (
-        <Fragment key={member.thumbnail}>
-          {member.thumbnail && (
-            <FadeIn>
-              <Avatar height="30" width="30" src={member.thumbnail} />
-            </FadeIn>
-          )}
-        </Fragment>
-      ))}
+      {data.allMeetupMember.nodes.map((member, i) => {
+        if (member.photo && member.photo.thumb_link) {
+          return (
+            <Fragment key={member.photo.thumb_link}>
+              <FadeIn>
+                <Avatar height="30" width="30" src={member.photo.thumb_link} />
+              </FadeIn>
+            </Fragment>
+          );
+        }
+      })}
     </Section>
   );
 };
