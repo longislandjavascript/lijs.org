@@ -5,8 +5,8 @@ import styled, { keyframes } from 'styled-components';
 const fadeInAnimation = keyframes`${fadeIn}`;
 
 interface FadeInProps {
-  block?: boolean;
-  duration?: string;
+  readonly block?: boolean;
+  readonly duration?: string;
 }
 
 const StyledFadeIn = styled.span<FadeInProps>`

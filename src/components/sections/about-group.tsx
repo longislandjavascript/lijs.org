@@ -17,14 +17,19 @@ const MemberCount = styled.div`
   margin: 0 auto;
 `;
 
+const GroupName = styled.span`
+  fontweight: bold;
+  color: gold;
+`;
+
 interface Member {
-  photo: {
-    thumb_link: string;
+  readonly photo: {
+    readonly thumb_link: string;
   };
 }
 
 interface AboutProps {
-  memberCount: string;
+  readonly memberCount: string;
 }
 const About: React.FC<AboutProps> = ({ memberCount }) => {
   return (
@@ -32,11 +37,8 @@ const About: React.FC<AboutProps> = ({ memberCount }) => {
       <h2>About Our Group</h2>
 
       <p>
-        <span style={{ fontWeight: 'bold', color: 'gold' }}>
-          Long Island JavaScript Group
-        </span>{' '}
-        is a space for JavaScript enthusiasts or newcomers interested in
-        learning the language.
+        <GroupName>Long Island JavaScript Group</GroupName> is a space for
+        JavaScript enthusiasts or newcomers interested in learning the language.
       </p>
       <p>
         We meet on the last Wednesday of the month at LaunchPad in Huntington,

@@ -21,8 +21,8 @@ const MemberCount = styled.span`
 `;
 
 interface Member {
-  photo: {
-    thumb_link: string;
+  readonly photo: {
+    readonly thumb_link: string;
   };
 }
 

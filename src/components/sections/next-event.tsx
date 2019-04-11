@@ -23,7 +23,7 @@ const WhenWhere = styled.div`
 `;
 
 interface NextEventProps {
-  event: any;
+  readonly event: any;
 }
 
 const NextEvent: React.FC<NextEventProps> = ({ event }) => {

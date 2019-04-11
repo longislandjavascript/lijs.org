@@ -1,8 +1,8 @@
 import styled, { StyledComponent } from 'styled-components';
 
 interface SectionProps {
-  bg?: string;
-  color?: string;
+  readonly bg?: string;
+  readonly color?: string;
 }
 
 const Section = styled.section<SectionProps>`

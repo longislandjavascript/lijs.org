@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Button, Section, Input, Textarea } from '../common';
+import { Button, Input, Section, Textarea } from '../common';
 
-function validateEmail(email) {
+const validateEmail = (email: string): boolean => {
   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
     return true;
   }
   return false;
-}
+};
 
 const StyledForm = styled.form`
   display: flex;
@@ -39,9 +39,6 @@ const ContactForm = () => {
     }));
   };
 
-  useEffect(() => {
-    console.log(formValues);
-  }, [formValues]);
   return (
     <Section bg="white" color="#333">
       <h2>Contact us</h2>

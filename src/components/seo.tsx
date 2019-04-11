@@ -10,11 +10,11 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 interface SEOProps {
-  description?: string;
-  lang?: string;
-  meta?: any[];
-  keywords?: string[];
-  title: string;
+  readonly description?: string;
+  readonly lang?: string;
+  readonly meta?: readonly any[];
+  readonly keywords?: readonly string[];
+  readonly title: string;
 }
 
 const SEO: React.FC<SEOProps> = ({
