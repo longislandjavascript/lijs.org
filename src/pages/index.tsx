@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
         <AboutGroup memberCount={memberCount} />
         <FAQ />
         <AboutSite />
-        {/* <ContactForm /> */}
+        <ContactForm />
         <TheEnd />
       </Layout>
     </>

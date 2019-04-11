@@ -20,6 +20,20 @@ const Title = styled.h1`
   }
 `;
 
+const renderHeader = data => (
+  <StyledHeader>
+    <div>
+      <Title>
+        <Link to="/">{data.site.siteMetadata.title}</Link>
+      </Title>
+    </div>
+    <br />
+    <MeetupButton />
+    <GithubButton />
+    <SlackButton />
+  </StyledHeader>
+);
+
 const Header = () => (
   <StaticQuery
     query={graphql`
@@ -31,19 +45,7 @@ const Header = () => (
         }
       }
     `}
-    render={(data) => (
-      <StyledHeader>
-        <div>
-          <Title>
-            <Link to="/">{data.site.siteMetadata.title}</Link>
-          </Title>
-        </div>
-        <br />
-        <MeetupButton />
-        <GithubButton />
-        <SlackButton />
-      </StyledHeader>
-    )}
+    render={renderHeader}
   />
 );
 

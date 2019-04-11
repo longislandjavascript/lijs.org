@@ -13,6 +13,10 @@ import React from 'react';
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
+const renderImage = data => (
+  <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+);
+
 const Image = () => (
   <StaticQuery
     query={graphql`
@@ -26,7 +30,7 @@ const Image = () => (
         }
       }
     `}
-    render={(data) => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+    render={renderImage}
   />
 );
 export default Image;

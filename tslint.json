@@ -2,7 +2,8 @@
     "defaultSeverity": "error",
     "extends": [
         "tslint:recommended",
-        "tslint-react"
+        "tslint-react",
+        "tslint-immutable"
     ],
     "jsRules": {},
     "rules": {
@@ -11,7 +12,8 @@
       "jsx-no-multiline-js": [false],
       "object-literal-sort-keys": false,
       "no-require-imports": false,
-      "no-var-requires": false
+      "no-var-requires": false,
+      "arrow-parens": false
     },
     "rulesDirectory": []
 }

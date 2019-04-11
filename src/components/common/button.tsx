@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border: none;
@@ -13,6 +13,13 @@ const Button = styled.button`
   cursor: pointer;
   :hover {
     opacity: 0.9;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    :hover {
+      opacity: 0.5;
+    }
   }
 `;
 
