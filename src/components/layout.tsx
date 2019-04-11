@@ -13,27 +13,9 @@ const Main = styled.main`
   text-align: center;
 `;
 
-import Header from './header';
 import './layout.css';
+import Header from './sections/header';
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={(data) => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <Main>{children}</Main>
-      </>
-    )}
-  />
-);
+const Layout = ({ children }) => <Main>{children}</Main>;
 
 export default Layout;

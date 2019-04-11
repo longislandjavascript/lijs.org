@@ -24,3 +24,6 @@
 * Added FAQ section.
 * Added global styles via styled-components.
 * Added more FAQs.
+
+## 2019-04-09 - 2019-04-11
+* Refactored components and file structure.

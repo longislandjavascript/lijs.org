@@ -5,12 +5,14 @@ const reactIcon = require('../../images/react-icon.svg');
 const gatsbyIcon = require('../../images/gatsby-icon.svg');
 const typescriptIcon = require('../../images/typescript-icon.svg');
 const netlifyIcon = require('../../images/netlify-icon.svg');
+const styledComponentsIcon = require('../../images/styled-components-icon.png');
 
 const links = {
   react: 'https://www.reactjs.org',
   gatsby: 'https://www.gatsbyjs.org',
   typescript: 'https://www.typescriptlang.org',
   netlify: 'https://www.netlify.com/',
+  styledComponents: 'https://www.styled-components.com',
 };
 
 const ItemWrapper = styled.div`
@@ -53,6 +55,29 @@ const Gatsby = () => (
         src={gatsbyIcon}
       />{' '}
       <span style={{ fontSize: '30px' }}>Gatsby</span>
+    </a>
+  </ItemWrapper>
+);
+
+const StyledComponents = () => (
+  <ItemWrapper>
+    Styled with
+    <a
+      href={links.styledComponents}
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: '20px',
+      }}
+    >
+      <img
+        height="40px"
+        style={{ margin: 0, paddingRight: '8px' }}
+        src={styledComponentsIcon}
+      />{' '}
+      <div style={{ fontSize: '20px' }}>Styled Components</div>
     </a>
   </ItemWrapper>
 );
@@ -105,7 +130,9 @@ const AboutSite = () => {
       <Wrapper>
         <ReactItem />
         <Gatsby />
+
         <TypeScript />
+        {/* <StyledComponents /> */}
         <Netlify />
       </Wrapper>
     </Section>
