@@ -5,6 +5,7 @@ const reactIcon = require('../../images/react-icon.svg');
 const gatsbyIcon = require('../../images/gatsby-icon.svg');
 const typescriptIcon = require('../../images/typescript-icon.svg');
 const netlifyIcon = require('../../images/netlify-icon.svg');
+const githubIcon = require('../../images/github-icon.svg');
 const styledComponentsIcon = require('../../images/styled-components-icon.png');
 
 const links = {
@@ -135,6 +136,7 @@ const AboutSite = () => {
         {/* <StyledComponents /> */}
         <Netlify />
       </Wrapper>
+      {/* <img style={{ fill: '#333' }} height="30" src={githubIcon} /> */}
     </Section>
   );
 };

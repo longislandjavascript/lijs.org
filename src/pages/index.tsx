@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby';
-import React, { useRef } from 'react';
+import React, { ReactComponentElement, useRef } from 'react';
 import { Section } from '../components/common';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -25,8 +25,8 @@ const IndexPage = ({ data }) => {
         <NextEvent event={data.meetupGroup.next_event} />
         <AboutGroup memberCount={memberCount} />
         <FAQ />
-        <AboutSite />
         <ContactForm />
+        <AboutSite />
         <TheEnd />
       </Layout>
     </>
@@ -44,6 +44,8 @@ export const query = graphql`
         link
         date
         time
+        time_stamp
+        venue
         rsvps
         address_street
         address_city_state

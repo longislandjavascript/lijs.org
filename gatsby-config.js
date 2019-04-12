@@ -1,5 +1,9 @@
 var proxy = require('http-proxy-middleware');
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Long Island JavaScript Group`,

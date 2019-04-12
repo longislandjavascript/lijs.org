@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import FadeIn from '../animations/fade-in';
 import { Button, Section } from '../common';
+import CountdownClock from '../countdown-clock';
 import EventMap from '../event-map';
 
 const EventName = styled.h1`
@@ -12,6 +13,10 @@ const EventName = styled.h1`
 `;
 
 const Container = styled.div``;
+
+const Bold = styled.div`
+  font-weight: bold;
+`;
 
 const WhenWhereWrapper = styled.div`
   margin: 20px;
@@ -33,24 +38,23 @@ const NextEvent: React.FC<NextEventProps> = ({ event }) => {
       {event.name && (
         <FadeIn block={true}>
           <EventName>{event.name}</EventName>
-          <div>{event.rsvps} are going.</div>
+          <CountdownClock date={event.time_stamp} bg="#efefef" color="#333" />
+          <Bold>{event.rsvps} are going.</Bold>
           <a href={event.link} target="_blank" rel="noopener noreferrer">
             <Button>RSVP Now!</Button>
           </a>
           <Container>
             <WhenWhereWrapper>
               <WhenWhere>When</WhenWhere>
-              <div>
-                <div>{event.date}</div>
-                <div>{event.time}</div>
-              </div>
+
+              <Bold>{event.date}</Bold>
+
+              <Bold>{event.time}</Bold>
             </WhenWhereWrapper>
             <WhenWhereWrapper>
               <WhenWhere>Where</WhenWhere>
               <div>
-                <div>
-                  <b>LaunchPad Huntington</b>
-                </div>
+                <Bold>LaunchPad Huntington</Bold>
                 <div>{event.address_street}</div>
                 <div>{event.address_city_state}</div>
               </div>

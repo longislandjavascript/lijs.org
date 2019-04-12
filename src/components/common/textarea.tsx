@@ -10,8 +10,7 @@ const Textarea = styled.textarea`
   color: #333;
   padding: 6px 10px;
   margin: 5px;
-  min-width: 280px;
-  max-width: 600px;
+  width: 100%;
   outline: none;
   @media only screen and (max-width: 480px) {
     width: 100%;

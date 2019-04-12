@@ -18,7 +18,7 @@ const MemberCount = styled.div`
 `;
 
 const GroupName = styled.span`
-  fontweight: bold;
+  font-weight: bold;
   color: gold;
 `;
 

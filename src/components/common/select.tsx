@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
-const Input = styled.input`
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+const Select = styled.select`
+  height: 35px;
   font-family: 'Roboto', sans-serif;
   border-radius: 10px;
   border: 1px solid lightgray;
@@ -17,4 +15,4 @@ const Input = styled.input`
   }
 `;
 
-export default Input;
+export default Select;

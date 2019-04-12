@@ -16,11 +16,12 @@ const Q = styled.h3`
   color: gold;
 `;
 
-const A = styled.h5`
+const A = styled.p`
+  line-height: 22px;
   color: lightgray;
 `;
 
-const FAQList = faqs.map((faq) => {
+const FAQList = faqs.map(faq => {
   return (
     <div key={faq.q}>
       <Q>{faq.q.toUpperCase()}</Q>

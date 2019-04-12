@@ -5,6 +5,8 @@
 * Refactored static data to `constants` directory.
 * Added contact form via Netlify forms.
 * Added Google Analytics via `gatsby-plugin-google-analytics` plugin.
+* Added CountdownClock component.
+* Tried eslint. Didn't work out so well so stuck with tslint for now.
 
 ## 2019-04-09 - 2019-04-10
 * Refactored components and file structure.
