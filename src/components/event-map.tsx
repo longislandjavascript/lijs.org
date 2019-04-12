@@ -2,10 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const MapWrapper = styled.div`
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
+  /* filter: grayscale(100%); */
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 600px) {
+    width: 100%;
     max-width: 100%;
   }
 `;

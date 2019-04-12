@@ -38,6 +38,7 @@ const MembersList = () => {
       }
     }
   `);
+
   return (
     <Wrapper>
       {data.allMeetupMember.nodes.map((member, i) => {

@@ -34,7 +34,7 @@ interface NextEventProps {
 const NextEvent: React.FC<NextEventProps> = ({ event }) => {
   return (
     <Section bg="#333" color="lightgray" style={{ minHeight: '300px' }}>
-      <h2>Next Event</h2>
+      <h2>-Next Event-</h2>
       {event.name && (
         <FadeIn block={true}>
           <EventName>{event.name}</EventName>

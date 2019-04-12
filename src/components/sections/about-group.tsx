@@ -34,14 +34,14 @@ interface AboutProps {
 const About: React.FC<AboutProps> = ({ memberCount }) => {
   return (
     <Section bg="black" color="white">
-      <h2>About Our Group</h2>
+      <h2>-About Our Group-</h2>
 
       <p>
         <GroupName>Long Island JavaScript Group</GroupName> is a space for
         JavaScript enthusiasts or newcomers interested in learning the language.
       </p>
       <p>
-        We meet on the last Wednesday of the month at LaunchPad in Huntington,
+        We meet on the last Wednesday of every month at LaunchPad in Huntington,
         NY.
       </p>
       <div style={{ margin: '10px' }}>

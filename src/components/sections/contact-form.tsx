@@ -28,7 +28,7 @@ const ContactForm = () => {
     message: '',
   });
   const { reason, name, email, message } = formValues;
-  const disabled = !message || !email || !validateEmail(email);
+  const disabled = !message || !name || !email || !validateEmail(email);
 
   const emailFontColor =
     !validateEmail(email) && email.length ? 'tomato' : '#333';
@@ -42,7 +42,9 @@ const ContactForm = () => {
   };
 
   const reasonOptions = contactReasons.map(r => (
-    <option key={r} value={r} label={r} />
+    <option key={r} value={r} label={r}>
+      {r}
+    </option>
   ));
 
   return (
