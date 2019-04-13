@@ -6,8 +6,9 @@ const TheEnd = () => (
     <h3>
       Thanks for checking out our site. We hope to see you at the next event!
     </h3>
-    <div>😀</div>
+
     <h2>-The End-</h2>
+    <div>😀</div>
   </Section>
 );
 

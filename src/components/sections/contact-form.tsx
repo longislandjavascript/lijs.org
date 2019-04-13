@@ -42,7 +42,7 @@ const ContactForm = () => {
   };
 
   const reasonOptions = contactReasons.map(r => (
-    <option key={r} value={r} label={r}>
+    <option key={r} value={r}>
       {r}
     </option>
   ));

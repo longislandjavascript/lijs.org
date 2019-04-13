@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Select = styled.select`
+  -webkit-appearance: none;
   height: 35px;
   font-family: 'Roboto', sans-serif;
   border-radius: 10px;
