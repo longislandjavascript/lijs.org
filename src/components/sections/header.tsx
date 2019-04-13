@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import GithubButton from '../buttons/github-button';
 import MeetupButton from '../buttons/meetup-button';
 import SlackButton from '../buttons/slack-button';
+import ZoomIn from '../animations/zoom-in';
 
 const StyledHeader = styled.header`
   padding: 3rem 6vw;
@@ -22,11 +23,11 @@ const Title = styled.h1`
 
 const renderHeader = data => (
   <StyledHeader>
-    <div>
+    <ZoomIn block={true}>
       <Title>
         <Link to="/">{data.site.siteMetadata.title}</Link>
       </Title>
-    </div>
+    </ZoomIn>
     <br />
     <MeetupButton />
     <GithubButton />

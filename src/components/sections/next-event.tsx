@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import FadeIn from '../animations/fade-in';
 import { Button, Section } from '../common';
 import CountdownClock from '../countdown-clock';
 import EventMap from '../event-map';
@@ -36,7 +35,7 @@ const NextEvent: React.FC<NextEventProps> = ({ event }) => {
     <Section bg="#333" color="lightgray" style={{ minHeight: '300px' }}>
       <h2>-Next Event-</h2>
       {event.name && (
-        <FadeIn block={true}>
+        <div>
           <EventName>{event.name}</EventName>
           <CountdownClock date={event.time_stamp} bg="#efefef" color="#333" />
           <Bold>{event.rsvps} are going.</Bold>
@@ -64,7 +63,7 @@ const NextEvent: React.FC<NextEventProps> = ({ event }) => {
           <br />
 
           <EventMap />
-        </FadeIn>
+        </div>
       )}
     </Section>
   );
