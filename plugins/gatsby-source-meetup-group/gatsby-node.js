@@ -5,9 +5,10 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
   const { createNode } = actions;
 
   const getNextEventData = event => {
+    const eventTime = event.time + event.utc_offset;
     const date = format(event.local_date, 'MMMM DD, YYYY');
-    const time = `${format(event.time, 'h:mm')} - ${format(
-      event.time + event.duration,
+    const time = `${format(eventTime, 'h:mm')} - ${format(
+      eventTime + event.duration,
       'h:mm A'
     )}`;
     const rsvps = `${event.yes_rsvp_count} JavaScript Enthusiasts`;
