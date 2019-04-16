@@ -1,16 +1,20 @@
 const axios = require('axios');
-const { format } = require('date-fns');
+const { formatToTimeZone } = require('date-fns-timezone');
 
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
   const { createNode } = actions;
 
   const getNextEventData = event => {
-    const eventTime = event.time + event.utc_offset;
-    const date = format(event.local_date, 'MMMM DD, YYYY');
-    const time = `${format(eventTime, 'h:mm')} - ${format(
-      eventTime + event.duration,
-      'h:mm A'
-    )}`;
+    const date = formatToTimeZone(event.time, 'MMMM DD, YYYY', {
+      timeZone: 'America/New_York',
+    });
+    const startTime = formatToTimeZone(event.time, 'h:mm', {
+      timeZone: 'America/New_York',
+    });
+    const endTime = formatToTimeZone(event.time + event.duration, 'h:mm A', {
+      timeZone: 'America/New_York',
+    });
+    const time = `${startTime} - ${endTime}`;
     const rsvps = `${event.yes_rsvp_count} JavaScript Enthusiasts`;
 
     const nextEvent = {
