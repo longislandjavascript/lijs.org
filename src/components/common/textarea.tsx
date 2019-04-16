@@ -12,6 +12,7 @@ const Textarea = styled.textarea`
   margin: 5px;
   width: 100%;
   outline: none;
+  min-height: 100px;
   @media only screen and (max-width: 480px) {
     width: 100%;
   }
