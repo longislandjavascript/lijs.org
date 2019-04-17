@@ -1,8 +1,9 @@
 import { graphql } from 'gatsby';
-import React, { ReactComponentElement, useRef } from 'react';
+import React, { ReactComponentElement, useRef, useEffect } from 'react';
 import { Section } from '../components/common';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import axios from 'axios';
 
 // * Sections
 import AboutGroup from '../components/sections/about-group';
@@ -16,6 +17,13 @@ import TheEnd from '../components/sections/the-end';
 const IndexPage = ({ data }) => {
   const formRef = useRef(null);
   const memberCount = `${data.meetupGroup.members} ${data.meetupGroup.who}`;
+
+  useEffect(() => {
+    const URI = '/.netlify/functions/fetchNextMeetupEvent';
+    axios.get(URI).then(res => {
+      console.log('THE DATA IS', res.data);
+    });
+  }, []);
 
   return (
     <>

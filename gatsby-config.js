@@ -75,15 +75,15 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
   // This option is used when using Netlify lambda functions, which proxies the url target on development mode.
-  // developMiddleware: app => {
-  //   app.use(
-  //     "/.netlify",
-  //     proxy({
-  //       target: "http://localhost:9000",
-  //       pathRewrite: {
-  //         "/.netlify/functions": "",
-  //       },
-  //     })
-  //   );
-  // },
+  developMiddleware: app => {
+    app.use(
+      '/.netlify',
+      proxy({
+        target: 'http://localhost:9000',
+        pathRewrite: {
+          '/.netlify/functions': '',
+        },
+      })
+    );
+  },
 };
