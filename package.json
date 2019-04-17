@@ -53,7 +53,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "netlify-lambda build && gatsby build",
+    "build": "gatsby build && lamdba:build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start:lamda": "npm-run-all --parallel lambda:serve develop",
