@@ -1,12 +1,14 @@
 import axios from 'axios';
 import {format} from 'date-fns';
 
-exports.handler = async (event, context, callback) => {
+exports.handler = async (event, context) => {
+
+  console.log("EVENT STARTED")
   // TODO- Convert to environment variable.
   const MEETUP_API_EVENTS_URL =
     'http://api.meetup.com/long-island-javascript-group/events?status=upcoming&page=1';
   const send = (body) => {
-    callback(null, {
+    return {
       statusCode: 200,
       // headers: {
       //   "Access-Control-Allow-Origin": "*",
@@ -14,10 +16,11 @@ exports.handler = async (event, context, callback) => {
       //     "Origin, X-Requested-With, Content-Type,Accept",
       // },
       body: JSON.stringify(body),
-    });
+    };
   };
 
   const getNextMeetupEvent = async () => {
+
     // try {
       const result = await axios.get(MEETUP_API_EVENTS_URL);
       const { data } = result;
@@ -48,8 +51,10 @@ exports.handler = async (event, context, callback) => {
   };
 
   // if (event.httpMethod === 'GET') {
-  getNextMeetupEvent().then((result => {
+  return getNextMeetupEvent().then((result => {
     send(result)
-  }));
+  })).catch((error)=> {
+    return {statusCode: 500, body: JSON.stringify(error)}
+  });
   // }
 };
