@@ -18,7 +18,7 @@ exports.handler = async (event, context, callback) => {
   };
 
   const getNextMeetupEvent = async () => {
-    try {
+    // try {
       const result = await axios.get(MEETUP_API_EVENTS_URL);
       const { data } = result;
       const nextEvent = data[0];
@@ -41,13 +41,13 @@ exports.handler = async (event, context, callback) => {
         address_city_state: 'Huntington, NY 11743',
       };
       send(finalResult);
-    } catch (error) {
-      return send(JSON.stringify(error))
-      // callback(error);
-    }
+    // } catch (error) {
+    //   return send(JSON.stringify(error))
+    //   // callback(error);
+    // }
   };
 
-  if (event.httpMethod === 'GET') {
+  // if (event.httpMethod === 'GET') {
     getNextMeetupEvent();
-  }
+  // }
 };
