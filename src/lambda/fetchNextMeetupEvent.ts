@@ -1,9 +1,7 @@
 import axios from 'axios';
 import {format} from 'date-fns';
 
-exports.handler = async (event, context) => {
-
-  console.log("EVENT STARTED")
+exports.handler = async () => {
   // TODO- Convert to environment variable.
   const MEETUP_API_EVENTS_URL =
     'http://api.meetup.com/long-island-javascript-group/events?status=upcoming&page=1';
@@ -30,16 +28,13 @@ exports.handler = async (event, context) => {
       address_street: nextEvent.venue.address_1,
       address_city_state: 'Huntington, NY 11743',
     };
-    console.log(finalResult)
     return finalResult;
    };
 
   // if (event.httpMethod === 'GET') {
   return getNextMeetupEvent().then((result => {
-    console.log("SUCCESS", JSON.stringify(result));
-    return {statusCode: 500, body: JSON.stringify(result)}
+    return {statusCode: 200, body: JSON.stringify(result)}
   })).catch((error)=> {
-    console.log("ERRORED", JSON.stringify(error));
     return {statusCode: 500, body: JSON.stringify(error)}
   });
   // }
