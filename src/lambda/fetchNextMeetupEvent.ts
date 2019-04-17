@@ -42,10 +42,7 @@ exports.handler = async (event, context, callback) => {
       };
       send(finalResult);
     } catch (error) {
-      return {
-        status: 500,
-        body: JSON.stringify(error),
-      }
+      return send(JSON.stringify(error))
       // callback(error);
     }
   };
