@@ -1,6 +1,5 @@
 import axios from 'axios';
 import {format} from 'date-fns';
-import console = require('console');
 
 exports.handler = async (event, context) => {
 
