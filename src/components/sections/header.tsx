@@ -5,12 +5,13 @@ import GithubButton from '../buttons/github-button';
 import MeetupButton from '../buttons/meetup-button';
 import SlackButton from '../buttons/slack-button';
 import ZoomIn from '../animations/zoom-in';
+import Sky from '../sky';
 
 const StyledHeader = styled.header`
   padding: 3rem 6vw;
   text-align: center;
   min-height: 50vh;
-  background: gold;
+  color: white;
 `;
 
 const Title = styled.h1`
@@ -22,17 +23,19 @@ const Title = styled.h1`
 `;
 
 const renderHeader = data => (
-  <StyledHeader>
-    <ZoomIn block={true}>
-      <Title>
-        <Link to="/">{data.site.siteMetadata.title}</Link>
-      </Title>
-    </ZoomIn>
-    <br />
-    <MeetupButton />
-    <GithubButton />
-    <SlackButton />
-  </StyledHeader>
+  <Sky className="">
+    <StyledHeader>
+      <ZoomIn block={true}>
+        <Title>
+          <Link to="/">{data.site.siteMetadata.title}</Link>
+        </Title>
+      </ZoomIn>
+      <br />
+      <MeetupButton />
+      <GithubButton />
+      <SlackButton />
+    </StyledHeader>
+  </Sky>
 );
 
 const Header = () => (
