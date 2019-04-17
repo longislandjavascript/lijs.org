@@ -40,7 +40,7 @@ exports.handler = async (event, context, callback) => {
         address_street: nextEvent.venue.address_1,
         address_city_state: 'Huntington, NY 11743',
       };
-      send(finalResult);
+      return finalResult;
     // } catch (error) {
     //   return send(JSON.stringify(error))
     //   // callback(error);
@@ -48,6 +48,8 @@ exports.handler = async (event, context, callback) => {
   };
 
   // if (event.httpMethod === 'GET') {
-    getNextMeetupEvent();
+  getNextMeetupEvent().then((result => {
+    send(result)
+  }));
   // }
 };
