@@ -28,47 +28,25 @@ const getNextEventData = event => {
   return nextEvent;
 };
 
-exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
-  const { createNode } = actions;
 
-  const processData = group => {
-    const nodeId = createNodeId(group.id.toString());
-    const nodeContent = JSON.stringify(group);
-    const nodeData = Object.assign({}, group, {
-      id: nodeId,
-      parent: null,
-      children: [],
-      internal: {
-        type: `MeetupGroup`,
-        content: nodeContent,
-        contentDigest: createContentDigest(group),
-      },
-    });
-
-    return nodeData;
-  };
+const fetchMeetupGroup = () => {
   const { MEETUP_API_GROUP_URL, MEETUP_API_EVENTS_URL } = process.env;
-
-  const fetchData = () => {
-    return new Promise(resolve => {
-      return Promise.all([
-        axios.get(MEETUP_API_GROUP_URL),
-        axios.get(MEETUP_API_EVENTS_URL),
-      ]).then(([groupResults, eventResults]) => {
+  return (
+    Promise.all([
+      axios.get(MEETUP_API_GROUP_URL),
+      axios.get(MEETUP_API_EVENTS_URL),
+    ])
+      .then(([groupResults, eventResults]) => {
         const newData = {
           ...groupResults.data,
           next_event: getNextEventData(eventResults.data[0]),
         };
-        resolve(newData);
-      });
-    });
-  };
-
-  return fetchData()
-    .then(newData => {
-      createNode(processData(newData));
-    })
-    .catch(error => {
-      console.error(error);
-    });
+        return newData
+      })
+      .catch(error => {
+        console.error(error);
+      })
+  );
 };
+
+export default fetchMeetupGroup;
