@@ -1,4 +1,4 @@
-const axios = require("axios");
+const axios = require('axios');
 
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
   const { createNode } = actions;
@@ -23,13 +23,13 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
   };
 
   // Join apiOptions with the Pixabay API URL
-  const apiUrl = `http://api.meetup.com/long-island-javascript-group/members`;
+  const { MEETUP_API_MEMBERS_URL } = process.env;
 
   // Gatsby expects sourceNodes to return a promise
   return (
     // Fetch a response from the apiUrl
     axios
-      .get(apiUrl)
+      .get(MEETUP_API_MEMBERS_URL)
       // Parse the response as JSON
       .then(({ data }) => {
         // For each query result (or 'hit')

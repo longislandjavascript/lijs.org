@@ -1,5 +1,21 @@
 const axios = require('axios');
 const { formatToTimeZone } = require('date-fns-timezone');
+const { MEETUP_API_GROUP_URL, MEETUP_API_EVENTS_URL } = process.env;
+
+const fetchData = () => {
+  return new Promise(resolve => {
+    return Promise.all([
+      axios.get(MEETUP_API_GROUP_URL),
+      axios.get(MEETUP_API_EVENTS_URL),
+    ]).then(([groupResults, eventResults]) => {
+      const newData = {
+        ...groupResults.data,
+        next_event: getNextEventData(eventResults.data[0]),
+      };
+      resolve(newData);
+    });
+  });
+};
 
 const getNextEventData = event => {
   const date = formatToTimeZone(event.time, 'MMMM DD, YYYY', {
@@ -46,22 +62,6 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
     });
 
     return nodeData;
-  };
-  const { MEETUP_API_GROUP_URL, MEETUP_API_EVENTS_URL } = process.env;
-
-  const fetchData = () => {
-    return new Promise(resolve => {
-      return Promise.all([
-        axios.get(MEETUP_API_GROUP_URL),
-        axios.get(MEETUP_API_EVENTS_URL),
-      ]).then(([groupResults, eventResults]) => {
-        const newData = {
-          ...groupResults.data,
-          next_event: getNextEventData(eventResults.data[0]),
-        };
-        resolve(newData);
-      });
-    });
   };
 
   return fetchData()
