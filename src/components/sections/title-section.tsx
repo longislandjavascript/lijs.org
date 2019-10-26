@@ -13,7 +13,9 @@ const Title = styled.h1`
   }
 `;
 
-const TitleSection: React.FC = () => {
+export interface TitleSectionProps {}
+
+const TitleSection: React.FC<TitleSectionProps> = () => {
   return (
     <Section bg="#000">
       <Title>
