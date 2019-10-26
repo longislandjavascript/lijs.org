@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Section } from "../common";
+import { useMeetupNextEvent } from "../../hooks";
 
 const Title = styled.h1`
   color: white;
@@ -15,6 +16,7 @@ const Title = styled.h1`
 export interface TitleSectionProps {}
 
 const TitleSection: React.FC<TitleSectionProps> = () => {
+  const data = useMeetupNextEvent();
   console.log(data);
   return (
     <Section bg="#000">

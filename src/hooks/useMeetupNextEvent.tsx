@@ -1,4 +1,5 @@
 import { useStaticQuery, graphql } from "gatsby";
+import { format } from "date-fns";
 
 const useMeetupNextEvent = () => {
   const { meetupGroup } = useStaticQuery(graphql`
@@ -10,14 +11,33 @@ const useMeetupNextEvent = () => {
           time
           utc_offset
         }
-        localized_location
-        city
-        members
       }
     }
   `);
 
-  return meetupGroup.next_event;
+  const event = meetupGroup.next_event;
+
+  const startDateTime = new Date(event.time);
+  const endDateTime = new Date(event.time - event.utc_offset);
+  const formattedDate = format(startDateTime, "MMMM dd, yyyy");
+  const formattedStartTime = format(startDateTime, "hh:mmb");
+  const formattedEndTime = format(endDateTime, "hh:mmb");
+
+  return {
+    name: event.name,
+    going: event.yes_rsvp_count,
+    date: formattedDate,
+    startTime: formattedStartTime,
+    endTime: formattedEndTime,
+
+    location: {
+      name: "LaunchPad Huntington",
+      address: "315 Main Street, 2nd Fl",
+      city: "Huntington",
+      state: "NY",
+      zipcode: "11743",
+    },
+  };
 };
 
 export { useMeetupNextEvent };
