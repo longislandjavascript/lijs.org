@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Section, SectionTitle } from "../common";
+import { Section } from "../common";
 
 const Title = styled.h1`
   color: white;
@@ -15,6 +15,7 @@ const Title = styled.h1`
 export interface TitleSectionProps {}
 
 const TitleSection: React.FC<TitleSectionProps> = () => {
+  console.log(data);
   return (
     <Section bg="#000">
       <Title>
