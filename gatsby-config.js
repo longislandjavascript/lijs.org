@@ -24,6 +24,13 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`BenchNine`],
+        display: "swap",
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -39,19 +46,19 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: "src/images/icon.png",
-        icons: [
-          {
-            src: "icons/icon_512x512.png",
-            sizes: "512x512",
-            types: "image/png",
-          },
-          {
-            src: "icons/icon_192x192.png",
-            sizes: "192x192",
-            types: "image/png",
-          },
-        ],
+        // icon: "src/images/icon.png",
+        // icons: [
+        //   {
+        //     src: "icons/icon_512x512.png",
+        //     sizes: "512x512",
+        //     types: "image/png",
+        //   },
+        //   {
+        //     src: "icons/icon_192x192.png",
+        //     sizes: "192x192",
+        //     types: "image/png",
+        //   },
+        // ],
       },
     },
     `gatsby-plugin-offline`,
