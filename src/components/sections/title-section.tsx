@@ -14,8 +14,6 @@ const Title = styled.h1`
 `;
 
 const TitleSection: React.FC = () => {
-  const data = useMeetupGroupInfo();
-  console.log(data);
   return (
     <Section bg="#000">
       <Title>
