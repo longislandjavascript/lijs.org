@@ -20,8 +20,8 @@ const useMeetupNextEvent = () => {
   const startDateTime = new Date(event.time);
   const endDateTime = new Date(event.time - event.utc_offset);
   const formattedDate = format(startDateTime, "MMMM dd, yyyy");
-  const formattedStartTime = format(startDateTime, "hh:mmb");
-  const formattedEndTime = format(endDateTime, "hh:mmb");
+  const formattedStartTime = format(startDateTime, "h:mm");
+  const formattedEndTime = format(endDateTime, "hh:mm b");
 
   return {
     name: event.name,
