@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `gatsby-starter-typescript-deluxe`,
-    description: `A Gatsby starter with TypeScript, Storybook, Styled Components, Framer Motion, Jest, and more.`,
+    title: `Long Island JavaScript`,
+    description: `The official website of the Long Island JavaScript Meetup Group.`,
     author: `@gojutin`,
-    url: "https://gatsby-starter-typescript-deluxe.netlify.com",
+    url: "https://www.lijs.org",
   },
   plugins: [
     {
@@ -62,19 +62,19 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        // icon: "src/images/icon.png",
-        // icons: [
-        //   {
-        //     src: "icons/icon_512x512.png",
-        //     sizes: "512x512",
-        //     types: "image/png",
-        //   },
-        //   {
-        //     src: "icons/icon_192x192.png",
-        //     sizes: "192x192",
-        //     types: "image/png",
-        //   },
-        // ],
+        icon: "src/images/icon.png",
+        icons: [
+          // {
+          //   src: "icons/icon_512x512.png",
+          //   sizes: "512x512",
+          //   types: "image/png",
+          // },
+          {
+            src: "icons/icon_196x196.png",
+            sizes: "196x196",
+            types: "image/png",
+          },
+        ],
       },
     },
     `gatsby-plugin-offline`,

@@ -12,6 +12,7 @@ const useMeetupGroupInfo = () => {
         localized_location
         city
         members
+        who
       }
     }
   `);
