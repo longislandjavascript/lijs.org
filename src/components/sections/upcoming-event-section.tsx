@@ -48,9 +48,14 @@ const EventWrapper = styled.div`
   align-items: center;
   min-width: 40%;
   max-width: 70%;
+
+  @media (${props => props.theme.sm}) {
+    max-width: 90%;
+  }
 `;
 
 const EventTitle = styled.h3`
+  text-align: center;
   color: ${props => props.theme.primary};
   font-size: 72px;
   border: 8px solid #fff500;
@@ -60,6 +65,10 @@ const EventTitle = styled.h3`
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   margin: 0.5rem 0;
+
+  @media (${props => props.theme.sm}) {
+    font-size: 30px;
+  }
 `;
 
 const TimeAndLocationWrapper = styled.div`
@@ -68,6 +77,10 @@ const TimeAndLocationWrapper = styled.div`
   justify-content: space-around;
   align-items: center;
   width: 100%;
+
+  @media (${props => props.theme.sm}) {
+    flex-direction: column;
+  }
 `;
 
 const TimeAndLocationItemWrapper = styled.div`
@@ -90,5 +103,11 @@ const TimeAndLocationItemWrapper = styled.div`
   span {
     color: ${props => props.theme.primary};
     text-transform: uppercase;
+  }
+
+  @media (${props => props.theme.sm}) {
+    font-size: 38px;
+    margin: 2rem 0;
+    min-width: 85%;
   }
 `;

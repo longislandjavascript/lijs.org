@@ -10,6 +10,10 @@ const Section = styled.div<SectionProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (${props => props.theme.sm}) {
+    padding: 1.5rem 1rem 1.5rem 1rem;
+  }
 `;
 
 export { Section };
