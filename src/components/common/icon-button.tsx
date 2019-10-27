@@ -20,6 +20,7 @@ const IconButton: React.FC<IconButtonProps> = ({ link, src }) => {
       target="_blank"
       rel="noopener noreferrer"
       whileHover={{ scale: 1.1 }}
+      aria-label={link}
     >
       <Img fixed={src} />
     </Link>

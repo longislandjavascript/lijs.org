@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
     background: ${props => props.theme.blue}
   }
   html {
-    font-family: BenchNine, -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    font-family:BenchNine, -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
   }
 `;
 

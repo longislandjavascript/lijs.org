@@ -55,23 +55,23 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-typescript-deluxe`,
-        short_name: `gatsby-starter-typescript-deluxe`,
-        description: `A Gatsby starter with TypeScript, Storybook, Styled Components, Framer Motion, Jest, and more.`,
+        name: `Long Island JavaScript Group`,
+        short_name: `LIJS Meetup`,
+        description: `The Long Island JavaScript Group is a space for JavaScript enthusiasts or newcomers interested in learning the language. We strive to provide an inclusive space for people of all skill levels by covering a range of topics around the JavaScript ecosystem.`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: "static/icons/icon-196x196.png",
+        // icon: "src/images/icon.png",
         icons: [
-          // {
-          //   src: "icons/icon_512x512.png",
-          //   sizes: "512x512",
-          //   types: "image/png",
-          // },
           {
-            src: "icons/icon_196x196.png",
-            sizes: "196x196",
+            src: "icons/lijs-icon-512.png",
+            sizes: "512x512",
+            types: "image/png",
+          },
+          {
+            src: "icons/lijs-icon-192.png",
+            sizes: "192x192",
             types: "image/png",
           },
         ],
