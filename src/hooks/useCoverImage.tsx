@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 const useCoverImage = () => {
   const img = useStaticQuery(graphql`
     query {
-      bg: file(relativePath: { eq: "lijs-cover.jpeg" }) {
+      bg: file(relativePath: { eq: "lijs-cover.jpg" }) {
         childImageSharp {
           fluid(
             quality: 90

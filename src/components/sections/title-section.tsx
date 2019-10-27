@@ -20,6 +20,7 @@ const Title = styled.h1`
     text-align: center;
     font-size: 10rem;
     margin: 0px;
+    font-weight: normal;
     @media (${props => props.theme.sm}) {
       font-size: 7rem;
     }

@@ -28,7 +28,7 @@ const SEO: React.FC<SEOProps> = props => {
   const siteTitle = props.title || title;
   const siteDescription = props.description || description;
   const siteUrl = props.url || url;
-  const siteImage = `${siteUrl}/icons/icon_512x512.png`;
+  const siteImage = `${siteUrl}/icons/lijs-icon-512.png`;
   return (
     <Helmet>
       <html lang="en" />
@@ -46,7 +46,6 @@ const SEO: React.FC<SEOProps> = props => {
       <meta property="og:image" content={siteImage} />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content={"@gojutin"} />
       <meta name="twitter:title" content={siteTitle} />
       <meta name="twitter:description" content={siteDescription} />
       <meta name="twitter:image" content={siteImage} />

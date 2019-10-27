@@ -3,8 +3,8 @@ import Layout from "../components/layout/layout";
 import SEO from "../components/seo/seo";
 import TitleSection from "../components/sections/title-section";
 import UpcomingEventSection from "../components/sections/upcoming-event-section";
-import FAQSection from "../components/sections/faqs-section";
 import SponsorsSection from "../components/sections/sponsors-section";
+import FAQSection from "../components/sections/faqs-section";
 
 const App = () => (
   <Layout>
