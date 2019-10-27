@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useMeetupNextEvent } from "../../hooks/";
-import { Section, SectionTitle } from "../common";
+import { Section, SectionTitle, CTAButton } from "../common";
 
 export interface UpcomingEventSectionProps {}
 
@@ -28,11 +28,12 @@ const UpcomingEventSection: React.FC<UpcomingEventSectionProps> = () => {
             <span>
               <p>Where:</p>
             </span>
-            <p>October 30th, 2019</p>
-            <p>6:00 - 9:00 PM</p>
-            <p>10 people going</p>
+            <p>{data.location.name}</p>
+            <p>{data.location.address}</p>
+            <p>{`${data.location.city}, ${data.location.state} ${data.location.zipcode}`}</p>
           </TimeAndLocationItemWrapper>
         </TimeAndLocationWrapper>
+        <CTAButton>RSVP Now!</CTAButton>
       </EventWrapper>
     </Section>
   );
@@ -45,7 +46,8 @@ const EventWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  min-width: 40%;
+  max-width: 70%;
 `;
 
 const EventTitle = styled.h3`
@@ -79,6 +81,7 @@ const TimeAndLocationItemWrapper = styled.div`
   color: #fff;
   font-size: 52px;
   margin: 3rem 0;
+  min-width: 40%;
 
   p {
     margin: 0.2rem 0;
