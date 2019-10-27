@@ -37,10 +37,14 @@ const FAQSSection: React.FC<FAQSSectionProps> = () => {
 
   return (
     <Section bg={blue}>
-      <SectionTitle>FAQS</SectionTitle>
+      <FAQSectionTitle>FAQS</FAQSectionTitle>
       <Container>{renderFAQS}</Container>
     </Section>
   );
 };
 
 export default FAQSSection;
+
+const FAQSectionTitle = styled(SectionTitle)`
+  margin-top: 0;
+`;
