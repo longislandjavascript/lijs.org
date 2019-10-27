@@ -36,10 +36,10 @@ const FAQSSection: React.FC<FAQSSectionProps> = () => {
   });
 
   return (
-    <Section bg={blue}>
+    <FAQSectionSection bg={blue}>
       <FAQSectionTitle>FAQS</FAQSectionTitle>
       <Container>{renderFAQS}</Container>
-    </Section>
+    </FAQSectionSection>
   );
 };
 
@@ -47,4 +47,8 @@ export default FAQSSection;
 
 const FAQSectionTitle = styled(SectionTitle)`
   margin-top: 0;
+`;
+
+const FAQSectionSection = styled(Section)`
+  padding-top: 0;
 `;
