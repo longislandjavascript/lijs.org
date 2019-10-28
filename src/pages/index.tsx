@@ -1,16 +1,17 @@
 import React from "react";
-import Layout from "../components/layout/layout";
-import SEO from "../components/seo/seo";
-import TitleSection from "../components/sections/title-section";
+import { Layout, SEO } from "../components/common";
+// Sections
+import CoverSection from "../components/sections/cover-section";
 import UpcomingEventSection from "../components/sections/upcoming-event-section";
 import SponsorsSection from "../components/sections/sponsors-section";
-import WaveSectionTransition from "../../static/svgs/WaveGroup.svg";
 import FAQSection from "../components/sections/faqs-section";
+// Waves
+import WaveSectionTransition from "../../static/svgs/WaveGroup.svg";
 
 const App = () => (
   <Layout>
     <SEO />
-    <TitleSection />
+    <CoverSection />
     <UpcomingEventSection />
     <SponsorsSection />
     <img

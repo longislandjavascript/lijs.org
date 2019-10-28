@@ -1,4 +1,3 @@
-export { useTheme } from "./useTheme";
 export { useMeetupGroupInfo } from "./useMeetupGroupInfo";
 export { useMeetupNextEvent } from "./useMeetupNextEvent";
 export { useCoverImage } from "./useCoverImage";

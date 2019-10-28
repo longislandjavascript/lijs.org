@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import faqs from "../../constants/faqs";
 import { Section, SectionTitle, Container } from "../common";
-import { useTheme } from "../../hooks";
+import { useTheme } from "../../theme";
 
 const FAQItem = styled.div`
   text-align: center;

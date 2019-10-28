@@ -1,5 +1,5 @@
 /*
- Fetch the social icons from /images via Graphql and return an
+ Fetch the sponsor icons from /images via Graphql and return an
  array of objects with image and link url.
 */
 import { useStaticQuery, graphql } from "gatsby";

@@ -60,7 +60,7 @@ const SocialButtonGroup = styled.div`
   padding: 5px 10px;
 `;
 
-const TitleSection: React.FC = () => {
+const CoverSection: React.FC = () => {
   const data = useMeetupGroupInfo();
   const img = useCoverImage();
   const socialButtons = useSocialButtons();
@@ -82,4 +82,4 @@ const TitleSection: React.FC = () => {
   );
 };
 
-export default TitleSection;
+export default CoverSection;
