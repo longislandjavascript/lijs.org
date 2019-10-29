@@ -55,7 +55,7 @@ const Input = styled.input`
 
 const TextArea = styled.textarea`
   width: 100%;
-  height: 46px;
+  height: 150px;
   border-radius: 10px;
   border: 1px solid #9f9f9f;
   outline-color: ${props => props.theme.blue};
