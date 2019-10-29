@@ -10,6 +10,7 @@ const SectionTitle = styled.h2<SectionTitleProps>`
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.25rem;
+  margin: 2.5rem 0;
 
   @media (${props => props.theme.sm}) {
     margin: 1.5rem 0;
