@@ -5,7 +5,9 @@ import CoverSection from "../components/sections/cover-section";
 import UpcomingEventSection from "../components/sections/upcoming-event-section";
 import SponsorsSection from "../components/sections/sponsors-section";
 import FAQSection from "../components/sections/faqs-section";
-// Waves
+import ContactUsSection from "../components/sections/contact-us-section";
+import FooterSection from "../components/sections/footer-section";
+// Section Transitions
 import WaveSectionTransition from "../../static/svgs/WaveGroup.svg";
 
 const App = () => (
@@ -20,6 +22,8 @@ const App = () => (
       style={{ width: "100%" }}
     />
     <FAQSection />
+    <ContactUsSection />
+    <FooterSection />
   </Layout>
 );
 
