@@ -1,7 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import theme from "./theme";
-import GlobalStyles from "./global-styles";
+import { theme, GlobalStyles } from "../../theme";
 
 const Layout: React.FC = ({ children }) => {
   return (
@@ -14,4 +13,4 @@ const Layout: React.FC = ({ children }) => {
   );
 };
 
-export default Layout;
+export { Layout };

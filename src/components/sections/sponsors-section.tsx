@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { useTheme, useSponsorButtons } from "../../hooks";
+import { useSponsorButtons } from "../../hooks";
+import { useTheme } from "../../theme";
 import { Section, SectionTitle, IconButton } from "../common";
 
 const ButtonGroup = styled.section`
