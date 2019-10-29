@@ -57,7 +57,7 @@ const EventWrapper = styled.div`
 const EventTitle = styled.h3`
   text-align: center;
   color: ${props => props.theme.primary};
-  font-size: 72px;
+  font-size: 60px;
   border: 8px solid #fff500;
   border: ${props => `8px solid #fff500 ${props.theme.primary}`};
   border-radius: 20px;
@@ -92,7 +92,7 @@ const TimeAndLocationItemWrapper = styled.div`
   max-width: 35%;
   min-width: 35%;
   color: #fff;
-  font-size: 52px;
+  font-size: 42px;
   margin: 3rem 0;
   min-width: 40%;
 
