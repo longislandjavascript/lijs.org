@@ -1,7 +1,4 @@
-export { useTheme } from "./useTheme";
-export { GlobalStyles } from "./global-styles";
-
-const theme = {
+export default {
   primary: "#fff500",
   blue: "#0085FF",
   darkblue: "#000C1A",
@@ -9,5 +6,3 @@ const theme = {
   sm: "max-width: 500px",
   md: "max-width: 900px",
 };
-
-export { theme };

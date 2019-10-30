@@ -30,8 +30,8 @@ const ContactForm = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 40%;
-  max-width: 60%;
+  min-width: 25%;
+  max-width: 50%;
 
   @media (${props => props.theme.sm}) {
     min-width: 90%;
@@ -49,18 +49,20 @@ const Input = styled.input`
   border-radius: 10px;
   border: 1px solid #9f9f9f;
   outline-color: ${props => props.theme.blue};
-  text-indent: 6px;
+  padding: 6px;
   margin: 0 0 30px 0;
+  font-size: 18px;
 `;
 
 const TextArea = styled.textarea`
   width: 100%;
-  height: 150px;
+  height: 120px;
   border-radius: 10px;
   border: 1px solid #9f9f9f;
   outline-color: ${props => props.theme.blue};
-  text-indent: 6px;
+  padding: 6px;
   margin: 0 0 30px 0;
+  font-size: 18px;
 `;
 
 const InputWrapper = styled.div`

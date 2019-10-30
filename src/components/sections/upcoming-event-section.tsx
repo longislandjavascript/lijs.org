@@ -49,7 +49,7 @@ const EventWrapper = styled.div`
   min-width: 40%;
   max-width: 70%;
 
-  @media (${props => props.theme.sm}) {
+  @media (${props => props.theme.md}) {
     max-width: 90%;
   }
 `;
@@ -68,6 +68,7 @@ const EventTitle = styled.h3`
 
   @media (${props => props.theme.sm}) {
     font-size: 30px;
+    border: 4px solid #fff500;
   }
 `;
 
@@ -105,8 +106,11 @@ const TimeAndLocationItemWrapper = styled.div`
     text-transform: uppercase;
   }
 
-  @media (${props => props.theme.sm}) {
+  @media (${props => props.theme.md}) {
     font-size: 38px;
+  }
+
+  @media (${props => props.theme.sm}) {
     margin: 2rem 0;
     min-width: 85%;
   }
