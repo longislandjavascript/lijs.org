@@ -1,8 +1,4 @@
-# [lijs.org](https://www.lijs.org)
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/cdc3bef1-1a65-4072-95d8-cfe20e0befd0/deploy-status)](https://app.netlify.com/sites/heuristic-mirzakhani-1f32ba/deploys)
-
-The official website of the Long Island JavaScript Group.
+# DEPRECATED- www.lijs.org
 
 This site is built with Gatsby and TypeScript.
 
